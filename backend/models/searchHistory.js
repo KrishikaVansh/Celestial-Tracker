@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const searchHistorySchema = new mongoose.Schema({
   location: String,
@@ -7,4 +7,6 @@ const searchHistorySchema = new mongoose.Schema({
   searchedAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("SearchHistory", searchHistorySchema);
+const SearchHistory = mongoose.model("SearchHistory", searchHistorySchema);
+
+export default SearchHistory; // ✅ Use ES module export

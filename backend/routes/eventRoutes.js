@@ -1,8 +1,12 @@
-const express = require("express");
+
+import express from "express";
 const router = express.Router();
-const {  getCelestialEvents} = require("../controllers/eventController");
+import { getCelestialEvents } from "../controllers/eventController.js";
+
 
 
 router.post("/search", getCelestialEvents );
 
-module.exports = router;
+
+
+export default router;

@@ -1,7 +1,9 @@
-const express = require("express");
+
+import express from "express";
 const router = express.Router();
-const { getSearchHistory } = require("../controllers/historyController");
+import {getSearchHistory} from "../controllers/historyController.js";
 
 router.get("/", getSearchHistory);
 
-module.exports = router;
+
+export default router;
